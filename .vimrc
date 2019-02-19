@@ -14,8 +14,8 @@ endif
 call plug#begin('~/.vim/plugged')
   Plug '/usr/local/opt/fzf'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'alok/notational-fzf-vim'
-  " Plug 'bookcasey/notational-fzf-vim', { 'branch': 'filename-only' }
+  " Plug 'alok/notational-fzf-vim'
+  Plug 'bookcasey/notational-fzf-vim', { 'branch': 'filename-only' }
   " Plug '~/Desktop/notational-fzf-vim', { 'branch': 'filename-only' }
 call plug#end()
 
@@ -27,9 +27,12 @@ let g:nv_search_paths = ['~/Library/Mobile\ Documents/iCloud\~co\~fluder\~fsnote
 let g:nv_default_extension = '.txt'
 let g:nv_preview_direction = 'bottom'
 let g:nv_preview_width = 60
-" let g:nv_use_short_pathnames = 1
+let g:nv_use_short_pathnames = 1
 " let g:nv_pathnames_display = 'filename'
 
 " Open in Calca
-
 nnoremap <leader>e :silent exec "!open -a Calca '%'" <bar> :NV<CR>
+
+" Use markdown syntax on all text files 
+au BufReadPost *.txt set syntax=markdown
+
