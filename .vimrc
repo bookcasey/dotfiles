@@ -22,11 +22,12 @@ call plug#end()
 
 " notational-fzf-vim
 
-nnoremap <silent> <c-s> :NV<CR>
+nnoremap <silent> <leader>l :NV<CR>
 
 let g:nv_search_paths = ['~/Library/Mobile\ Documents/iCloud\~co\~fluder\~fsnotes/Documents']
 let g:nv_default_extension = '.txt'
-let g:nv_preview_direction = 'bottom'
+let g:nv_create_note_window = 'edit'
+let g:nv_preview_direction = 'right'
 let g:nv_preview_width = 60
 let g:nv_use_short_pathnames = 1
 " let g:nv_pathnames_display = 'filename'
