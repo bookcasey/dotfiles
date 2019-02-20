@@ -36,5 +36,5 @@ let g:nv_use_short_pathnames = 1
 nnoremap <leader>e :silent exec "!open -a Calca '%'" <bar> :NV<CR>
 
 " Use markdown syntax on all text files 
-au BufReadPost *.txt set syntax=markdown
+au BufReadPost,BufNewFile *.txt set syntax=markdown nonumber
 
