@@ -6,6 +6,13 @@ let mapleader = "\<Space>"
  
 nnoremap <leader>p :e ~/.vimrc<CR>
 
+" Habit breaking hard mode
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
 " Plug-ins
 
 if empty(glob('~/.vim/autoload/plug.vim'))
