@@ -13,6 +13,12 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" Look 
+
+let &colorcolumn="80,".join(range(120,999),",")
+highlight ColorColumn ctermbg=0
+
+
 " Plug-ins
 
 if empty(glob('~/.vim/autoload/plug.vim'))
