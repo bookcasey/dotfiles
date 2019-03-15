@@ -17,6 +17,38 @@
           {
             "manipulators": [
               {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com\\.apple\\.Terminal$"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "description": "change shift+enter to right_arrow, enter in Terminal",
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": [
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow"
+                  },
+                  {
+                    "key_code": "return_or_enter"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "manipulators": [
+              {
                 "description": "Change caps_lock to control when used as modifier, escape when used alone",
                 "from": {
                   "key_code": "caps_lock",
