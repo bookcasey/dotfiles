@@ -3,8 +3,15 @@
 set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
 set number
 let mapleader = "\<Space>"
- 
+
 nnoremap <leader>p :e ~/.vimrc<CR>
+
+" Case insensitive search
+
+set ignorecase
+set smartcase
+
+" Folds
 
 " Habit breaking hard mode
 
@@ -22,29 +29,29 @@ inoremap <Right> <NOP>
 
 let &colorcolumn="80,".join(range(120,999),",")
 highlight ColorColumn ctermbg=0
-
+highlight Folded ctermbg=0
 
 " Plug-ins
 
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
-  Plug '/usr/local/opt/fzf'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  " Plug 'alok/notational-fzf-vim'
-  Plug 'bookcasey/notational-fzf-vim', { 'branch': 'filename-only' }
-  " Plug '~/Desktop/notational-fzf-vim', { 'branch': 'filename-only' }
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'alok/notational-fzf-vim'
+" Plug 'bookcasey/notational-fzf-vim', { 'branch': 'filename-only' }
+" Plug '~/Desktop/Projects/notational-fzf-vim', { 'branch': 'height' }
 call plug#end()
 
 " notational-fzf-vim
 
-nnoremap <silent> <leader>l :NV<CR>
+nnoremap <silent> <leader>l :NV!<CR>
 
-let g:nv_search_paths = ['~/Library/Mobile\ Documents/iCloud\~co\~fluder\~fsnotes/Documents']
+let g:nv_search_paths = ['~/Notes']
 let g:nv_default_extension = '.txt'
 let g:nv_create_note_window = 'edit'
 let g:nv_preview_direction = 'right'
