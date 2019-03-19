@@ -13,6 +13,12 @@ set smartcase
 
 " Folds
 
+set foldmethod=indent
+augroup OpenAllFoldsOnFileOpen
+  autocmd!
+  autocmd BufRead * normal zR
+augroup END
+
 " Habit breaking hard mode
 
 noremap <Up> <NOP>
