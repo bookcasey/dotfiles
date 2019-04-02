@@ -120,6 +120,14 @@
               "to": {
                 "key_code": "left_command"
               }
+            },
+            {
+              "from": {
+                "key_code": "right_option"
+              },
+              "to": {
+                "key_code": "right_command"
+              }
             }
           ]
         },
@@ -127,37 +135,27 @@
           "disable_built_in_keyboard_if_exists": false,
           "fn_function_keys": [],
           "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": false,
+            "product_id": 50489,
+            "vendor_id": 1133
+          },
+          "ignore": true,
+          "manipulate_caps_lock_led": false,
+          "simple_modifications": []
+        },
+        {
+          "disable_built_in_keyboard_if_exists": false,
+          "fn_function_keys": [],
+          "identifiers": {
             "is_keyboard": false,
             "is_pointing_device": true,
-            "product_id": 9505,
-            "vendor_id": 2362
+            "product_id": 50489,
+            "vendor_id": 1133
           },
           "ignore": false,
           "manipulate_caps_lock_led": false,
-          "simple_modifications": [
-            {
-              "from": {
-                "pointing_button": "button4"
-              },
-              "to": {
-                "key_code": "left_arrow",
-                "modifiers": [
-                  "command"
-                ]
-              }
-            },
-            {
-              "from": {
-                "pointing_button": "button5"
-              },
-              "to": {
-                "key_code": "right_arrow",
-                "modifiers": [
-                  "command"
-                ]
-              }
-            }
-          ]
+          "simple_modifications": []
         }
       ],
       "fn_function_keys": [
@@ -260,10 +258,37 @@
       ],
       "name": "",
       "selected": true,
-      "simple_modifications": [],
+      "simple_modifications": [
+        {
+          "from": {
+            "pointing_button": "button4"
+          },
+
+          "to": {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "command"
+            ]
+          }
+
+        },
+        {
+          "from": {
+            "pointing_button": "button5"
+          },
+          "to": {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "command"
+            ]
+          }
+        }
+      ],
       "virtual_hid_keyboard": {
         "country_code": 0
       }
     }
+
+
   ]
 }
