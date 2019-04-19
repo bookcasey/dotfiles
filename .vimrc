@@ -37,6 +37,10 @@ let &colorcolumn="80,".join(range(120,999),",")
 highlight ColorColumn ctermbg=0
 highlight Folded ctermbg=0
 
+" Swap files
+
+set directory^=$HOME/.vim/tmp//
+
 " Plug-ins
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -66,7 +70,7 @@ let g:nv_use_short_pathnames = 1
 " let g:nv_pathnames_display = 'filename'
 
 " Open in Calca
-nnoremap <leader>e :silent exec "!open -a Calca '%'" <bar> :NV<CR>
+nnoremap <leader>e :w! <bar> :silent exec "!open -a Calca '%'" <bar> :NV!<CR>
 
 " Use markdown syntax on all text files 
 au BufReadPost,BufNewFile *.txt set syntax=markdown
